@@ -1,7 +1,7 @@
 import { getPageContent } from '@/lib/pages';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import Timeline from '@/components/features/Timeline';
+
 
 export const metadata: Metadata = {
     title: 'About | Ricardo Lopes',
@@ -22,10 +22,7 @@ export default async function AboutPage() {
                 dangerouslySetInnerHTML={{ __html: page.body }}
             />
 
-            <div className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800">
-                <h2 className="text-2xl font-bold mb-8 text-copy-light dark:text-copy-dark">Journey.</h2>
-                <Timeline />
-            </div>
+
         </div>
     );
 }
