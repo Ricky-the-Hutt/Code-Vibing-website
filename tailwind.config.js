@@ -9,39 +9,65 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
+        sans: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       },
       colors: {
-        'lethain-blue': '#357edd',
-        'lethain-blue-light': '#96ccff',
+        background: {
+          light: '#FDFDFD',
+          dark: '#212737',
+        },
+        copy: {
+          light: '#282728',
+          dark: '#EAEDF3',
+        },
+        accent: {
+          DEFAULT: '#006CAC',
+          dark: '#EAEDF3', // In dark mode, links are often similar to text or white
+        }
       },
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: '#374151',
+            color: theme('colors.copy.light'),
+            fontFamily: theme('fontFamily.mono').join(', '),
             a: {
-              color: '#357edd',
+              color: theme('colors.accent.DEFAULT'),
               textDecoration: 'none',
+              borderBottomWidth: '1px',
+              borderBottomStyle: 'dashed',
+              borderBottomColor: theme('colors.accent.DEFAULT'),
+              textUnderlineOffset: '4px',
               '&:hover': {
-                color: '#96ccff',
+                borderBottomStyle: 'solid',
               },
             },
-            h1: {
-              color: 'inherit',
-            },
-            h2: {
-              color: 'inherit',
-            },
-            h3: {
-              color: 'inherit',
-            },
-            strong: {
-              color: 'inherit',
-            },
+            h1: { color: theme('colors.copy.light') },
+            h2: { color: theme('colors.copy.light') },
+            h3: { color: theme('colors.copy.light') },
+            strong: { color: theme('colors.copy.light') },
+            code: { color: theme('colors.copy.light') },
           },
         },
-      },
+        invert: {
+          css: {
+            color: theme('colors.copy.dark'),
+            a: {
+              color: theme('colors.copy.dark'), // Dark mode links are white/light
+              borderBottomColor: theme('colors.copy.dark'),
+            },
+            h1: { color: theme('colors.copy.dark') },
+            h2: { color: theme('colors.copy.dark') },
+            h3: { color: theme('colors.copy.dark') },
+            strong: { color: theme('colors.copy.dark') },
+            code: { color: theme('colors.copy.dark') },
+            li: { color: theme('colors.copy.dark') },
+            'ul > li::marker': { color: theme('colors.copy.dark') },
+            'ol > li::marker': { color: theme('colors.copy.dark') },
+          },
+        },
+      }),
     },
   },
   plugins: [

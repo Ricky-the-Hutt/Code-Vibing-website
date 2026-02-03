@@ -7,7 +7,7 @@ export default function SocialMediaLinks() {
         href="https://www.linkedin.com/in/ricardogalopes/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+        className="text-copy-light dark:text-copy-dark hover:text-accent dark:hover:text-white transition-colors"
         aria-label="LinkedIn"
       >
         <svg
@@ -30,7 +30,7 @@ export default function SocialMediaLinks() {
         href="https://github.com/Ricky-the-Hutt"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors ml-4"
+        className="text-copy-light dark:text-copy-dark hover:text-accent dark:hover:text-white transition-colors ml-4"
         aria-label="GitHub"
       >
         <svg

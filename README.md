@@ -1,18 +1,15 @@
-# Ricardo Lopes - AI Website
+# Ricardo Lopes - Personal Website
 
-My first AI website using Cursor, built with Next.js, TypeScript, and Tailwind CSS.
+A minimalist personal website and blog built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- ✅ Multi-language support (English & Portuguese)
+- ✅ Clean, minimalist design
 - ✅ Blog with markdown-based CMS
 - ✅ Search functionality
-- ✅ Social media integration (X, Instagram)
-- ✅ Comments system (Giscus)
-- ✅ Countly Flex analytics integration
-- ✅ Responsive design with hamburger menu
+- ✅ Social media integration
 - ✅ CV download page
-- ✅ Minimalist design (Black, White, Red)
+- ✅ Dark mode support
 
 ## Getting Started
 
@@ -33,10 +30,6 @@ npm install
 cp .env.example .env.local
 ```
 
-3. Update the `.env.local` file with your configuration:
-   - Countly App Key (optional)
-   - Giscus configuration (for comments)
-
 ### Development
 
 Run the development server:
@@ -54,98 +47,13 @@ npm run build
 npm start
 ```
 
-## Deployment to Vercel
-
-1. Push your code to GitHub
-2. Import your repository in Vercel
-3. Vercel will automatically detect Next.js and configure the build
-4. Add environment variables in Vercel dashboard if needed
-5. Deploy!
-
-## Project Structure
-
-```
-├── components/          # React components
-│   ├── Header.tsx      # Navigation with hamburger menu
-│   ├── Footer.tsx      # Footer with version and date
-│   ├── Layout.tsx      # Main layout wrapper
-│   └── ...
-├── content/            # Content files
-│   └── blog/          # Blog posts (markdown)
-├── lib/               # Utility functions
-│   └── blog.ts        # Blog post processing
-├── pages/             # Next.js pages
-│   ├── index.tsx      # Home page
-│   ├── cv.tsx         # CV download page
-│   └── blog/         # Blog pages
-├── public/            # Static assets
-│   └── cv.pdf        # CV file (add your own)
-└── styles/           # Global styles
-    └── globals.css    # Tailwind CSS
-```
-
-## Adding Content
-
-### Blog Posts
-
-1. Create a markdown file in `content/blog/`
-2. Use the following frontmatter format:
-
-```markdown
----
-title: Your Post Title
-date: 2024-01-16
-excerpt: A brief description
-locale: en
----
-
-Your content here...
-```
-
-3. Create separate files for each language (e.g., `post-en.md` and `post-pt.md`)
-
-### CV File
-
-1. Add your CV PDF to `public/cv.pdf`
-2. The CV page will automatically link to it
-
-### Images
-
-1. Add images to `public/` folder
-2. Reference them in your content as `/image-name.jpg`
-
-## Configuration
-
-### Countly Analytics
-
-1. Get your GA tracking ID
-2. Add it to `.env.local` as `NEXT_PUBLIC_GA_ID`
-
-### Giscus Comments
-
-1. Go to [giscus.app](https://giscus.app)
-2. Configure your repository
-3. Get the repo ID and category ID
-4. Update the Giscus configuration in `pages/blog/[slug].tsx`
-
-### Social Media Links
-
-Update the URLs in `components/SocialMediaLinks.tsx` with your actual social media profiles.
-
 ## Technologies Used
 
-- **Next.js 14** - React framework
+- **Next.js** - React framework
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
-- **gray-matter** - Markdown frontmatter parsing
-- **remark** - Markdown processing
-- **date-fns** - Date formatting
-- **Giscus** - Comments system
-
-## License
-
-This project is open source and available for personal use.
+- **PostHog** - Analytics
 
 ---
 
-**Ricardo knows how to build stuff with AI** 🚀
+**Ricardo Lopes**

@@ -4,12 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300 transition-colors duration-200 antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    @apply bg-background-light text-copy-light dark:bg-background-dark dark:text-copy-dark transition-colors duration-200 antialiased;
   }
 
   a {
-    @apply text-lethain-blue no-underline hover:text-lethain-blue-light transition-colors duration-200;
+    @apply transition-colors duration-200;
   }
 }
 

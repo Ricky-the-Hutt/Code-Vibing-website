@@ -1,5 +1,5 @@
-import { trackEvent as trackCountlyEvent, trackConversion as trackCountlyConversion } from '@/components/CountlyAnalytics';
-import { trackPostHogEvent, setPostHogUserProperty } from '@/components/PostHogAnalytics';
+import { trackEvent as trackCountlyEvent, trackConversion as trackCountlyConversion } from '@/components/features/CountlyAnalytics';
+import { trackPostHogEvent, setPostHogUserProperty } from '@/components/features/PostHogAnalytics';
 
 /**
  * Track a general event in both Countly and PostHog.

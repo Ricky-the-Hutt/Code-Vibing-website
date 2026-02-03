@@ -20,7 +20,7 @@ This document outlines the non-technical requirements, content needs, and busine
 ### Text Content
 - **Do you have existing content?** No
 - **Content creation:** I will write after
-- **Languages:** English and Portuguese (Portugal)
+- **Languages:** English only
 
 ### Media Assets
 - **Images:** I will put them in Github repo after
