@@ -20,6 +20,9 @@ export default function Header() {
                             </span>
                         </div>
                         <div className="flex items-center gap-6">
+                            <Link href="/projects" className="text-base font-normal text-copy-light dark:text-copy-dark hover:text-accent dark:hover:text-white transition-colors">
+                                Projects
+                            </Link>
                             <Link href="/blog" className="text-base font-normal text-copy-light dark:text-copy-dark hover:text-accent dark:hover:text-white transition-colors">
                                 Posts
                             </Link>

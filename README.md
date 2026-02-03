@@ -57,3 +57,13 @@ npm start
 ---
 
 **Ricardo Lopes**
+
+## Troubleshooting
+
+### Vercel Deployment Not Triggering
+If pushing to GitHub does not trigger a Vercel build automatically:
+1.  **Check Vercel Project Settings**: Ensure the project is connected to the correct GitHub repository (`Ricky-the-Hutt/Code-Vibing-website`).
+2.  **Verify Git Integration**: In Vercel, go to Settings > Git. Ensure "Deploy Hooks" are enabled (or simply that the connection is active).
+3.  **Manual Redeploy**: Go to Deployments > [Latest Deployment] > ... > Redeploy.
+4.  **Check Ignored Build Step**: If `vercel.json` contains a `git.ignore` command, ensure it's not falsely returning success (skipping build).
+
