@@ -2,6 +2,14 @@ import '@/styles/globals.css';
 import { Providers } from './providers';
 import Layout from '@/components/layout/Layout';
 import { Metadata } from 'next';
+import { Newsreader } from 'next/font/google';
+
+const newsreader = Newsreader({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-newsreader',
+    style: ['normal', 'italic'],
+});
 
 export const metadata: Metadata = {
     title: 'Ricardo Lopes',
@@ -18,7 +26,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body>
+            <body className={`${newsreader.variable} font-serif`}>
                 <Providers>
                     <Layout>{children}</Layout>
                 </Providers>

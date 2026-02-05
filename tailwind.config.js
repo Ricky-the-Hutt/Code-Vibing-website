@@ -9,21 +9,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+        sans: ['var(--font-newsreader)', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        serif: ['var(--font-newsreader)', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       },
       colors: {
         background: {
-          light: '#FDFDFD',
-          dark: '#212737',
+          light: '#FDFDFD', // Keeping original white as requested
+          dark: '#1F1E1D',  // New dark background
         },
         copy: {
-          light: '#282728',
-          dark: '#EAEDF3',
+          light: '#1F1E1D', // New dark text for light mode
+          dark: '#F0EEE6',  // New light text for dark mode
         },
         accent: {
           DEFAULT: '#006CAC',
-          dark: '#EAEDF3', // In dark mode, links are often similar to text or white
+          dark: '#F0EEE6',
         }
       },
       typography: (theme) => ({
@@ -31,31 +32,28 @@ module.exports = {
           css: {
             maxWidth: 'none',
             color: theme('colors.copy.light'),
-            fontFamily: theme('fontFamily.mono').join(', '),
+            fontFamily: theme('fontFamily.serif').join(', '),
             a: {
-              color: theme('colors.accent.DEFAULT'),
-              textDecoration: 'none',
-              borderBottomWidth: '1px',
-              borderBottomStyle: 'dashed',
-              borderBottomColor: theme('colors.accent.DEFAULT'),
+              color: theme('colors.copy.light'),
+              textDecoration: 'underline',
               textUnderlineOffset: '4px',
               '&:hover': {
-                borderBottomStyle: 'solid',
+                textDecoration: 'none',
               },
             },
-            h1: { color: theme('colors.copy.light') },
-            h2: { color: theme('colors.copy.light') },
-            h3: { color: theme('colors.copy.light') },
+            h1: { color: theme('colors.copy.light'), fontFamily: theme('fontFamily.serif').join(', ') },
+            h2: { color: theme('colors.copy.light'), fontFamily: theme('fontFamily.serif').join(', ') },
+            h3: { color: theme('colors.copy.light'), fontFamily: theme('fontFamily.serif').join(', ') },
             strong: { color: theme('colors.copy.light') },
             code: { color: theme('colors.copy.light') },
+            blockquote: { color: theme('colors.copy.light') },
           },
         },
         invert: {
           css: {
             color: theme('colors.copy.dark'),
             a: {
-              color: theme('colors.copy.dark'), // Dark mode links are white/light
-              borderBottomColor: theme('colors.copy.dark'),
+              color: theme('colors.copy.dark'),
             },
             h1: { color: theme('colors.copy.dark') },
             h2: { color: theme('colors.copy.dark') },
@@ -63,6 +61,7 @@ module.exports = {
             strong: { color: theme('colors.copy.dark') },
             code: { color: theme('colors.copy.dark') },
             li: { color: theme('colors.copy.dark') },
+            blockquote: { color: theme('colors.copy.dark') },
             'ul > li::marker': { color: theme('colors.copy.dark') },
             'ol > li::marker': { color: theme('colors.copy.dark') },
           },
